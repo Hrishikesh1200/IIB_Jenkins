@@ -32,9 +32,9 @@ pipeline {
                 bat """
                     CALL "${MQSIPROFILE}"
                     "${CREATEBAR_EXE}" ^
-                      -data "${WORK_DIR}" ^
+                      -data "${WORKSPACE_ROOT }" ^
                       -b "${BAR_OUTPUT_DIR}\\TestJenkin.bar" ^
-                      -a "${WORK_DIR}\\TestJenkin" ^
+                      -a "TestJenkin" ^
                       -p "TestJenkin"
                 """
             }
