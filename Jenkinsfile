@@ -8,7 +8,7 @@ pipeline {
     environment {
         REPO_URL = 'https://github.com/Hrishikesh1200/IIB_Jenkins.git'
         BRANCH = 'master'
-        WORK_DIR = 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\IIB_job\\IIB_Jenkins'
+        WORK_DIR = 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\IIB_job'
         WORKSPACE_ROOT = "${env.WORKSPACE}"
         BAR_OUTPUT_DIR = "${WORKSPACE_ROOT}\\bars"
 
