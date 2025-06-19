@@ -5,6 +5,7 @@ pipeline {
         // Set your GitHub repo URL
         REPO_URL = 'https://github.com/Hrishikesh1200/IIB_Jenkins.git'
         BRANCH = 'master'
+        WORK_DIR = 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\IIB_job\\IIB_Jenkins'
     }
 
     stages {
@@ -18,7 +19,7 @@ pipeline {
         stage('Create BAR File') {
             steps {
                 bat """
-                    "C:\\Program Files\\IBM\\ACE\\12.0.12.0\\tools\\mqsicreatebar.exe" -data IIB_Jenkins -b jenkinsApplication.bar -a jenkinsApplication
+                    "C:\\Program Files\\IBM\\ACE\\12.0.12.0\\tools\\mqsicreatebar.exe" -data ${WORK_DIR} -b jenkinsApplication.bar -a ${WORK_DIR}\\jenkinsApplication
                 """
             }
         }
