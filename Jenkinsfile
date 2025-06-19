@@ -3,6 +3,8 @@ pipeline {
 
     parameters {
         string(name: 'ACE_VERSION', defaultValue: '12.0.12.0', description: 'IBM ACE version')
+        string(name: 'NODE_NAME', defaultValue: 'test', description: 'IBM ACE Node name')
+        string(name: 'SERVER_NAME', defaultValue: 't1', description: 'IBM ACE Server name')
     }
 
     environment {
@@ -36,6 +38,21 @@ pipeline {
                       -b "${BAR_OUTPUT_DIR}\\TestJenkin.bar" ^
                       -a "TestJenkin" ^
                       -p "TestJenkin"
+                """
+            }
+        }
+
+        stage('Deploy BAR File') {
+            steps {
+                bat """
+                    CALL "${MQSIPROFILE}"
+
+                    "${DEPLOY_EXE}" ^
+                  "${params.NODE_NAME}" ^
+                    -e "${params.SERVER_NAME}" ^
+                  -a "${BAR_OUTPUT_DIR}\\TestJenkin.bar"
+
+                
                 """
             }
         }
