@@ -33,9 +33,9 @@ pipeline {
                     CALL "${MQSIPROFILE}"
                     "${CREATEBAR_EXE}" ^
                       -data "${WORK_DIR}" ^
-                      -b "${BAR_OUTPUT_DIR}\\jenkinsApplication.bar" ^
-                      -a "${WORK_DIR}\\jenkinsApplication" ^
-                      -p "jenkinsApplication"
+                      -b "${BAR_OUTPUT_DIR}\\TestJenkin.bar" ^
+                      -a "${WORK_DIR}\\TestJenkin" ^
+                      -p "TestJenkin"
                 """
             }
         }
