@@ -4,7 +4,7 @@ pipeline {
     environment {
         // Set your GitHub repo URL
         REPO_URL = 'https://github.com/Hrishikesh1200/IIB_Jenkins.git'
-        BRANCH = 'main'
+        BRANCH = 'master'
     }
 
     stages {
