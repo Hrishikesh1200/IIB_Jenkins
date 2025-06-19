@@ -13,18 +13,14 @@ pipeline {
                 echo "Cloning the repository from ${REPO_URL}..."
                 git branch: "${BRANCH}", url: "${REPO_URL}"
             }
-  }
+        }
 
-        stage('create bar') {
+        stage('Create BAR File') {
             steps {
-               bat """
-"C:\Program Files\IBM\ACE\12.0.12.0\tools\mqsicreatebar.exe" -data IIB_Jenkins -b jenkinsApplication.bar -a jenkinsApplication
-"""
+                bat """
+                    "C:\\Program Files\\IBM\\ACE\\12.0.12.0\\tools\\mqsicreatebar.exe" -data IIB_Jenkins -b jenkinsApplication.bar -a jenkinsApplication
+                """
             }
-  }
-
-
-
-
-}
+        }
+    }
 }
