@@ -68,7 +68,7 @@ pipeline {
                             "${DEPLOY_EXE}" ^
                                 "${params.REMOTE_NODE_NAME}" ^
                                 -i "${params.REMOTE_HOST}" ^
-                                -q "${params.REMOTE_PORT}" ^
+                                -p "${params.REMOTE_PORT}" ^
                                 -e "${params.REMOTE_SERVER_NAME}" ^
                                 -a "${BAR_OUTPUT_DIR}\\TestJenkin.bar"
                         """
