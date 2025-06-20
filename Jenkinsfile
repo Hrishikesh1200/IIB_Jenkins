@@ -3,13 +3,13 @@ pipeline {
 
     parameters {
         string(name: 'ACE_VERSION', defaultValue: '12.0.12.0', description: 'IBM ACE version')
-        string(name: 'NODE_NAME', defaultValue: 'LocalNode', description: 'Local ACE Node name')
-        string(name: 'SERVER_NAME', defaultValue: 'LocalServer', description: 'Local ACE Server name')
+        string(name: 'NODE_NAME', defaultValue: 'test', description: 'Local ACE Node name')
+        string(name: 'SERVER_NAME', defaultValue: 't1', description: 'Local ACE Server name')
 
-        string(name: 'REMOTE_NODE_NAME', defaultValue: 'node3', description: 'Remote ACE Node name')
+        string(name: 'REMOTE_NODE_NAME', defaultValue: 'node_3', description: 'Remote ACE Node name')
         string(name: 'REMOTE_SERVER_NAME', defaultValue: 'Server_1', description: 'Remote ACE Server name')
         string(name: 'REMOTE_HOST', defaultValue: '192.168.3.165', description: 'Remote host IP or DNS name')
-        string(name: 'REMOTE_PORT', defaultValue: '7802', description: 'Remote admin listener port')
+        string(name: 'REMOTE_PORT', defaultValue: '4416', description: 'Remote admin listener port')
     }
 
     environment {
